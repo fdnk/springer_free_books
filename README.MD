@@ -59,3 +59,15 @@ docker run --rm -v [local_download_folder]:/app/downloads springer-image
 
 and the downloads will be at [local_download_folder]
 
+## Bundle to binary
+Use pyinstaller to bundle a binary. To avoid an excessive large binary, is recomended to start with a clean enviroment, an then bundle.
+
+```
+python3 -m venv exe
+# Unix: source exe/bin/activate
+# Windows: exe\Scripts\activate.bat
+pip install -r requirements.txt
+pyinstaller main.spec
+```
+
+
